@@ -8,7 +8,7 @@ body {
 
 /* Profile Picture */
 .logo {
-	background-image: url("/assets/wallpaper.jpeg");
+	background-image: url("assets/wallpaper.jpeg");
 	background-size: cover;
 	background-position: center;
 	border-radius: 50%;
