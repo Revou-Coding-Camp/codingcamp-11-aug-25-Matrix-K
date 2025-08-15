@@ -4,73 +4,243 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio Website</title>
-
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-	</head>
-	<body>
-		<header class="flex items-center justify-between p-[16px]">
-			<div class="bg-blue-500 rounded-full h-[75px] w-[75px] .main-logo"></div>
 
-			<nav>
-				<ul class="flex space-x-4">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			:root {
+				--primary-blue: #3b82f6;
+				--dark-blue: #1d4ed8;
+			}
+		</style>
+	</head>
+	<body class="font-sans">
+		<!-- Header -->
+		<header
+			class="flex flex-wrap items-center justify-between p-4 bg-[var(--primary-blue)] shadow-md">
+			<div
+				class="rounded-full h-[60px] w-[60px] bg-[var(--dark-blue)] logo"></div>
+
+			<nav class="mt-2 md:mt-0">
+				<ul class="flex flex-wrap gap-2">
 					<li>
 						<a
 							href="#home"
-							class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500"
+							class="px-4 py-2 bg-white rounded-lg hover:bg-[var(--dark-blue)] hover:text-white transition"
 							>Home</a
 						>
 					</li>
 					<li>
 						<a
 							href="#profile"
-							class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500"
+							class="px-4 py-2 bg-white rounded-lg hover:bg-[var(--dark-blue)] hover:text-white transition"
 							>Our Profile</a
 						>
 					</li>
 					<li>
 						<a
-							href="#portofolio"
-							class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500"
-							>Portofolio</a
+							href="#portfolio"
+							class="px-4 py-2 bg-white rounded-lg hover:bg-[var(--dark-blue)] hover:text-white transition"
+							>Portfolio</a
 						>
 					</li>
 					<li>
 						<a
-							href="#message"
-							class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500"
+							href="#contact"
+							class="px-4 py-2 bg-white rounded-lg hover:bg-[var(--dark-blue)] hover:text-white transition"
 							>Message Us</a
 						>
 					</li>
 				</ul>
 			</nav>
 		</header>
-		<hr />
 
 		<main>
 			<!-- Home -->
-			<section class="h-[400px] bg-gray-100" id="home">
-				<h1>Home</h1>
+			<section
+				id="home"
+				class="relative h-[600px] flex flex-col items-center justify-center text-center px-4 text-white">
+				<!-- Background image -->
+				<div
+					class="absolute inset-0 bg-cover bg-center"
+					style="background-image: url('/src/company.jpeg')"></div>
+
+				<!-- Overlay -->
+				<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+				<!-- Content -->
+				<div class="relative z-10 max-w-2xl">
+					<h1 class="text-4xl font-bold mb-4">
+						Welcome <span class="text-yellow-400" id="welcome">[Name]</span> to
+						My Portfolio Website
+					</h1>
+					<p class="text-lg">
+						We provide innovative solutions and the best services to support the
+						success of your business. Together, let's create a brighter future.
+					</p>
+				</div>
 			</section>
-			<hr />
+
 			<!-- Our Profile -->
-			<section class="h-[400px] bg-gray-100" id="profile">
-				<h1>our profile</h1>
+			<section id="profile" class="py-12 bg-white">
+				<div class="max-w-5xl mx-auto px-4">
+					<h2 class="text-3xl font-bold text-gray-800 text-center mb-6">
+						Our Profile
+					</h2>
+					<p class="text-center text-gray-600 mb-10">
+						We are a creative team passionate about delivering the best design,
+						web, and development services.
+					</p>
+
+					<div class="grid gap-8 md:grid-cols-3">
+						<div
+							class="bg-blue-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+							<h3 class="text-xl font-semibold text-center mb-2">
+								Our Mission
+							</h3>
+							<p class="text-gray-600 text-center">
+								To provide innovative solutions that make a real difference for
+								our clients.
+							</p>
+						</div>
+
+						<div
+							class="bg-blue-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+							<h3 class="text-xl font-semibold text-center mb-2">Our Vision</h3>
+							<p class="text-gray-600 text-center">
+								To be a leading creative agency recognized worldwide.
+							</p>
+						</div>
+
+						<div
+							class="bg-blue-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+							<h3 class="text-xl font-semibold text-center mb-2">Our Values</h3>
+							<p class="text-gray-600 text-center">
+								Creativity, integrity, and commitment to excellence.
+							</p>
+						</div>
+					</div>
+				</div>
 			</section>
-			<hr />
-			<!-- Portofolio -->
-			<section class="h-[400px] bg-gray-100" id="portofolio">
-				<h1>Portofolio</h1>
+
+			<!-- Portfolio -->
+			<section id="portfolio" class="bg-blue-50 py-16">
+				<div class="container mx-auto px-6">
+					<h2 class="text-3xl font-bold text-center mb-8">My Portfolio</h2>
+
+					<div class="flex flex-wrap justify-center gap-8">
+						<!-- Project Card -->
+						<div
+							class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition w-80">
+							<img
+								src="src/app.png"
+								alt="Project 1"
+								class="w-full h-48 object-cover" />
+							<div class="p-6">
+								<h3 class="text-xl font-semibold mb-2">Simple Calculator</h3>
+								<p class="text-gray-600 mb-4">Simple Web Based Calculator</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
-			<hr />
+
 			<!-- Message Us -->
-			<section class="h-[400px] bg-gray-100" id="message">
-				<h1>Message Us</h1>
+			<section id="contact" class="py-12 bg-blue-100 text-gray-800">
+				<div class="max-w-5xl mx-auto px-4">
+					<h2 class="text-3xl font-bold text-center mb-8">Message Us</h2>
+
+					<div class="flex flex-col md:flex-row gap-8">
+						<!-- Form -->
+						<div class="bg-white p-6 rounded-lg shadow-md flex-1">
+							<form id="messageForm" class="space-y-4">
+								<!-- Name -->
+								<div>
+									<label for="name" class="block font-semibold mb-1"
+										>Name</label
+									>
+									<input
+										type="text"
+										id="name"
+										name="name"
+										placeholder="Enter Your Name"
+										class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+								</div>
+
+								<!-- Date -->
+								<div>
+									<label for="date" class="block font-semibold mb-1"
+										>Date</label
+									>
+									<input
+										type="date"
+										id="date"
+										name="date"
+										class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+								</div>
+
+								<!-- Gender -->
+								<div>
+									<span class="block font-semibold mb-1">Gender</span>
+									<div class="flex items-center gap-4">
+										<label class="inline-flex items-center whitespace-nowrap">
+											<input
+												type="radio"
+												name="gender"
+												value="male"
+												class="text-blue-500 focus:ring-blue-400" />
+											<span class="ml-2">Male</span>
+										</label>
+										<label class="inline-flex items-center whitespace-nowrap">
+											<input
+												type="radio"
+												name="gender"
+												value="female"
+												class="text-blue-500 focus:ring-blue-400" />
+											<span class="ml-2">female</span>
+										</label>
+									</div>
+								</div>
+
+								<!-- Message -->
+								<div>
+									<label for="messageInput" class="block font-semibold mb-1"
+										>Message</label
+									>
+									<textarea
+										id="messageInput"
+										name="message"
+										placeholder="Enter Your Message"
+										rows="3"
+										style="resize: none; overflow-y: auto"
+										class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+								</div>
+
+								<!-- Submit Button -->
+								<button
+									type="submit"
+									class="bg-[var(--dark-blue)] text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+									Submit
+								</button>
+							</form>
+						</div>
+
+						<!-- Result -->
+						<div class="bg-white p-6 rounded-lg shadow-md flex-1">
+							<h4 class="text-xl font-semibold mb-4">Input Result</h4>
+							<p id="output" class="text-gray-600 italic">
+								There is no new message.
+							</p>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 
-		<footer></footer>
-
-		<script src="js/script.js"></script>
+		<!-- Footer -->
+		<footer class="bg-[var(--dark-blue)] text-center text-white py-4">
+			&copy; 2025 My Portfolio Website
+		</footer>
 	</body>
+	<script src="js/script.js"></script>
 </html>
