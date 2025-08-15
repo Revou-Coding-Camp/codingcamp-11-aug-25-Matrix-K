@@ -1,3 +1,98 @@
-.main-logo {
-	background-image: url("/assets/RevoU.png");
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #f0f6ff;
+	color: #333;
+}
+
+/* Profile Picture */
+.logo {
+	background-image: url("/src/wallpaper.jpeg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+
+/* Card Profile */
+.card-profile {
+	background: #dbeafe;
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	animation: fadeUp 0.8s ease-in-out;
+}
+.card-profile:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Input Form */
+form input,
+form textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	transition: all 0.3s ease;
+}
+
+textarea {
+	width: 400px;
+	resize: none;
+	height: auto;
+	min-height: 60px;
+	overflow-y: hidden;
+}
+
+form input:focus,
+form textarea:focus {
+	border-color: #1d4ed8;
+	box-shadow: 0 0 6px rgba(29, 78, 216, 0.4);
+	outline: none;
+}
+
+/* Button */
+button {
+	padding: 10px 16px;
+	border: none;
+	border-radius: 8px;
+	background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+button:hover {
+	background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+	transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+	background: #1d4ed8;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+/* Animation */
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
 }
