@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			// Output
 			document.getElementById("output").innerHTML = `
 			<strong>Current time</strong> : ${currentTime} <br><br>
-			<strong>Nama</strong> : ${name} <br>
-			<strong>Tanggal Lahir</strong> : ${formattedDate} <br>
-			<strong>Jenis Kelamin</strong> : ${gender.value} <br>
-			<strong>Pesan</strong> : ${message}
+			<strong>Name</strong> : ${name} <br>
+			<strong>Date</strong> : ${formattedDate} <br>
+			<strong>Gender</strong> : ${gender.value} <br>
+			<strong>Message</strong> : ${message}
 		`;
 
 			messageForm.reset();
